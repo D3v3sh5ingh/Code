@@ -1,0 +1,8 @@
+import base64
+encrypted="PxQFRhALSwAaSUdSZBQRQRYJWlRFTkALK18aVhIPWxZOTl1IY1YFRxYNQxYNSUtIY1YQVRwaWgBO Tl1IY1oYUAENShoLAgJPaBNRUhAARxYfCwoNKkdRE0lICQYHAggLL1YSFF9ICQEIDAUBMEBRE0lI CQAICAJPaBNRVRwHCVNTTkAfLV1XFA4="
+my_eyes=str.encode("d3v3sh.singh")
+decoded=base64.b64decode(encrypted)
+decrypted=""
+for i in range(0,len(decoded)):
+    decrypted+=chr((my_eyes[i%len(my_eyes)] ^ decoded[i]))
+print(decrypted)

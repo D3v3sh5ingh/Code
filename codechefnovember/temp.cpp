@@ -1,10 +1,10 @@
-#include <bits/stdc++.h>
+		#include <bits/stdc++.h>
 
 	using namespace std;
 
-	#define f(i,a,b) for(i=a;i<b;i++)
+	#define f(i,a,b) for(int i=a;i<b;i++)
 	#define rep(i,n) f(i,0,n)
-	#define fd(i,a,b) for(i=a;i>=b;i--)
+	#define fd(i,a,b) for(int i=a;i>=b;i--)
 	#define pb push_back
 	#define mp make_pair
 	#define vi vector< int >
@@ -23,14 +23,16 @@
 	#define viii vector<tri>
 	#define mod (1000*1000*1000+7)
 
-	int a[123456],b[123456];
-
+    
 	int main(){
 		std::ios::sync_with_stdio(false); cin.tie(NULL);
 		int t;
 		cin>>t;
-		while(t--){
-			
+		while(t--)
+		{
+			string s;
+            cin>>s;
+            cout<<s<<endl;
 		}
 		return 0;   
 	}

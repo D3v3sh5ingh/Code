@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+		#include <bits/stdc++.h>
 
 	using namespace std;
 
@@ -29,8 +29,27 @@
 		std::ios::sync_with_stdio(false); cin.tie(NULL);
 		int t;
 		cin>>t;
-		while(t--){
-			
+		while(t--)
+		{
+			ll int n,i=0;
+			cin>>n;
+			int a[n+1];
+            memset(a,0,sizeof(a));
+			f(i,1,n)
+			{
+				int temp;
+                cin>>temp;
+                a[temp]++;
+			}
+            f(i,1,n+1)
+			{
+				if(a[i]==0)
+                {
+                    cout<<i<<endl;
+                    break;
+                }
+			}
+									
 		}
 		return 0;   
 	}

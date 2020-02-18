@@ -1,10 +1,11 @@
-#include <bits/stdc++.h>
+	#include <bits/stdc++.h>
 
 	using namespace std;
-
-	#define f(i,a,b) for(i=a;i<b;i++)
+	
+	#define ulli unsigned long long int 
+	#define f(i,a,b) for(int i=a;i<b;i++)
 	#define rep(i,n) f(i,0,n)
-	#define fd(i,a,b) for(i=a;i>=b;i--)
+	#define fd(i,a,b) for(int i=a;i>=b;i--)
 	#define pb push_back
 	#define mp make_pair
 	#define vi vector< int >
@@ -22,15 +23,18 @@
 	#define vll vector<pll>
 	#define viii vector<tri>
 	#define mod (1000*1000*1000+7)
-
-	int a[123456],b[123456];
-
-	int main(){
+    
+    
+    int main(){
 		std::ios::sync_with_stdio(false); cin.tie(NULL);
 		int t;
 		cin>>t;
-		while(t--){
-			
+		while(t--)
+		{
+            int l,r,k;
+            cin>>l>>r>>k;
+            if(l==r)k=1;
+            cout<<k<<endl;
 		}
 		return 0;   
 	}

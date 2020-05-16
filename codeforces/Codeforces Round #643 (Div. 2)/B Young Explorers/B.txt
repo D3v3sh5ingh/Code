@@ -1,0 +1,15 @@
+Problem URL: https://codeforces.com/contest/1355/problem/B
+I/O statements for B Young Explorers 
+
+---------------------------------------------------
+ Input 
+2
+3
+1 1 1
+5
+2 3 1 2 2
+
+ Output 
+3
+2
+---------------------------------------------------

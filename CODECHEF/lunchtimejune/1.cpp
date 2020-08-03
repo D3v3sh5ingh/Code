@@ -34,6 +34,29 @@ signed main()
 
     while (t--)
     {
+        int s, n, res = 0;
+        cin >> s >> n;
+        if (s % 2 != 0)
+        {
+            s -= 1;
+            res++;
+        }
+        while (s != 0)
+        {
+            // cout << "ij " << s << endl;
+            if (s < n)
+            {
+                res += 1;
+                s = 0;
+            }
+            else
+            {
+                int temo = (s / n);
+                s -= (temo * n);
+                res += temo;
+            }
+        }
+        cout << res << endl;
     }
 
     return 0;

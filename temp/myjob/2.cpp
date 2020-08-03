@@ -34,6 +34,11 @@ signed main()
 
     while (t--)
     {
+        double n, u;
+        cin >> n >> u;
+
+        double res = cbrt(u - 3 * 3 * 3 - 3 * 3 * 3);
+        cout << res << endl;
     }
 
     return 0;

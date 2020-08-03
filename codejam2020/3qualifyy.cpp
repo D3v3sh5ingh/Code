@@ -1,0 +1,61 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+    int test;
+    cin >> test;
+    for(int t = 1; t <= test; ++t)
+    {
+        int n;
+        cin >> n;
+        vector<pair<int,int> > activity;
+        int arr[n][2];
+        char res[n];
+        for(int i = 0; i < n; ++i)
+        {
+            cin >> arr[i][0] >> arr[i][1];
+            activity.push_back(make_pair(arr[i][0],i));
+        }
+
+        sort(activity.begin(), activity.end());
+
+        int cameron = 0, jamie = 0;
+        bool flag = false;
+        for(int i = 0; i < n; ++i)
+        {
+            if(activity[i].first >= cameron)
+            {
+                res[activity[i].second] = 'C';
+                cameron = arr[activity[i].second][1];
+            }
+            else
+            {
+                if(activity[i].first >= jamie)
+                {
+                    res[activity[i].second] = 'J';
+                    jamie = arr[activity[i].second][1];
+                }
+                else
+                {
+                    flag = true;
+                    break;
+                }
+            }
+        }
+        if(flag)
+        {
+            cout << "Case #" << t << ": IMPOSSIBLE" << endl;
+        }
+        else
+        {
+            cout << "Case #"<< t << ": ";
+            for(int i = 0; i < n; ++i)
+            {
+                cout<<res[i];
+            }
+            cout << '\n';
+        }
+    }
+}

@@ -1,0 +1,15 @@
+Problem URL: https://codeforces.com/contest/1389/problem/C
+I/O statements for C Good String 
+
+---------------------------------------------------
+ Input 
+3
+95831
+100120013
+252525252525
+
+ Output 
+3
+5
+0
+---------------------------------------------------

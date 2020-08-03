@@ -1,0 +1,13 @@
+Problem URL: https://codeforces.com/contest/1368/problem/A
+I/O statements for A C+= 
+
+---------------------------------------------------
+ Input 
+2
+1 2 3
+5 4 100
+
+ Output 
+2
+7
+---------------------------------------------------

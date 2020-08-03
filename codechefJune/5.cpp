@@ -18,7 +18,7 @@ using namespace std;
 //const int INF=1e9+5;//billion
 int primes[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89};
 string alpha = "abcdefghijklmnopqrstuvwxyz";
-/*----------Code is dope----------*/
+/*----------JU IS LOVE----------*/
 //int power(int a,int b,int m){int ans=1;while(b){if(b&1)ans=(ans*a)%m;b/=2;a=(a*a)%m;}return ans;}
 //int power(int a, int b){int ans=1;while(b){if(b&1)ans=ans*a;b/=2;a=a*a;}return ans;}
 
@@ -34,7 +34,34 @@ signed main()
 
     while (t--)
     {
+        int n;
+        cin >> n;
+        vector<string> s;
+        int asd = 1;
+        bool r = true;
+        for (int i = 0; i < n; i++)
+        {
+            if (r)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    cout << asd << " ";
+                    asd++;
+                }
+            }
+            else
+            {
+                int nw = asd + n - 1;
+                asd += n;
+                for (int j = 0; j < n; j++)
+                {
+                    cout << nw << " ";
+                    nw--;
+                }
+            }
+            cout << endl;
+            r = (r) ? false : true;
+        }
     }
-
     return 0;
 }

@@ -12,7 +12,7 @@ using namespace std;
 #define int long long int
 #define double long double
 #define pb push_back
-#define mp make_pair
+// #define mp make_pair
 #define PI acos(-1)
 
 //const int INF=1e9+5;//billion
@@ -34,7 +34,49 @@ signed main()
 
     while (t--)
     {
-    }
+        int n;
+        cin >> n;
 
+        map<int, int> mp;
+        set<int> s;
+
+        bool flag = false;
+        for (int i = 0; i < n; ++i)
+        {
+            int temp;
+            cin >> temp;
+            s.insert(temp);
+            if (++mp[temp] > 2)
+                flag = true;
+        }
+
+        if (flag || mp[*(s.rbegin())] > 1)
+        {
+            cout << "NO" << endl;
+            continue;
+        }
+        else
+        {
+
+            cout << "YES" << endl;
+            for (auto &i : mp)
+            {
+                cout << i.first << " ";
+                i.second -= 1;
+            }
+            stack<int> s;
+            for (auto i : mp)
+            {
+                if (i.second >= 1)
+                    s.push(i.first);
+            }
+            while (!s.empty())
+            {
+                cout << s.top() << " ";
+                s.pop();
+            }
+            cout << endl;
+        }
+    }
     return 0;
 }

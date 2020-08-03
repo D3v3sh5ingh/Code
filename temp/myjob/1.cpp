@@ -28,13 +28,51 @@ signed main()
     // freopen("input.txt", "r", stdin);
     crap;
 
-    int t;
-
-    cin >> t;
-
-    while (t--)
+    int n, m;
+    cin >> n;
+    map<int, vector<int>> cust;
+    for (int i = 0; i < n; i++)
     {
+        int a, b;
+        cin >> a >> b;
+        cust[a].push_back(b);
     }
+    cin >> m;
+    vector<vector<int>> st;
+    int happy = 0, ser = 0;
+    for (int i = 0; i < m; i++)
+    {
+        int a, b;
+        cin >> a >> b;
+        vector<int> temp = cust[a];
+        bool done = false;
+        for (int i = 0; i < temp.size(); i++)
+        {
+            if (temp[i] == b)
+            {
+                happy++;
+                ser++;
+                done = true;
+                cust[a].erase(cust[a].begin() + i);
+                // cust[a][i]=-1;
+                break;
+            }
+        }
+        if (!done)
+        {
+            vector<int> wq = {a, b};
+            st.push_back(wq);
+        }
+    }
+    for (int i = 0; i < st.size(); i++)
+    {
+        if (cust[st[i][0]].size() > 0)
+        {
+            ser++;
+            cust[st[i][0]].erase(cust[st[i][0]].begin());
+        }
+    }
+    cout << ser << " " << happy << endl;
 
     return 0;
 }

@@ -1,0 +1,24 @@
+Problem URL: https://codeforces.com/contest/1350/problem/D
+I/O statements for D Orac and Medians 
+
+---------------------------------------------------
+ Input 
+5
+5 3
+1 5 2 6 1
+1 6
+6
+3 2
+1 2 3
+4 3
+3 1 2 3
+10 3
+1 2 3 4 5 6 7 8 9 10
+
+ Output 
+no
+yes
+yes
+no
+yes
+---------------------------------------------------

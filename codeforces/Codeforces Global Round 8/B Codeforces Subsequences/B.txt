@@ -1,0 +1,16 @@
+Problem URL: https://codeforces.com/contest/1368/problem/B
+I/O statements for B Codeforces Subsequences 
+
+---------------------------------------------------
+ Input 
+1
+
+ Output 
+codeforces
+---------------------------------------------------
+---------------------------------------------------
+ Input 
+3
+
+ Output 
+codeforcesss---------------------------------------------------

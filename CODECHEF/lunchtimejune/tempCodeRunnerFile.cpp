@@ -34,7 +34,49 @@ signed main()
 
     while (t--)
     {
-    }
+        int n;
+        cin >> n;
 
+        map<int, int> mp;
+        set<int> s;
+
+        bool flag = false;
+        for (int i = 0; i < n; ++i)
+        {
+            int temp;
+            cin >> temp;
+            s.insert(temp);
+            if (++mp[temp] > 2)
+                flag = true;
+        }
+
+        if (flag || mp[*(s.rbegin())] > 1)
+        {
+            cout << "NO" << endl;
+            continue;
+        }
+        else
+        {
+
+            cout << "YES" << endl;
+            for (int &i : mp)
+            {
+                cout << i.first << " ";
+                i.second -= 1;
+            }
+            stack<int> s;
+            for (int i : mp)
+            {
+                if (i.second >= 1)
+                    s.push(i.first);
+            }
+            while (!s.empty())
+            {
+                cout << s.top() << " ";
+                s.pop();
+            }
+            cout << endl;
+        }
+    }
     return 0;
 }

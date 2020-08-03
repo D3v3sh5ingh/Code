@@ -1,0 +1,19 @@
+Problem URL: https://codeforces.com/contest/1389/problem/E
+I/O statements for E Calendar Ambiguity 
+
+---------------------------------------------------
+ Input 
+5
+6 7 4
+10 7 12
+12 30 7
+1 1 1
+3247834 10298779 625324
+
+ Output 
+6
+9
+5
+0
+116461800
+---------------------------------------------------

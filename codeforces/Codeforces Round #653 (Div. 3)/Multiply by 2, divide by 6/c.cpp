@@ -1,5 +1,5 @@
 /*--------------------------"DeveshSingh"------"Delhi Technological UNIVERSITY"--------*/
-/*------------------------------Knowledge is power/\---------------------------------*/
+/*------------------------------God is Great/\---------------------------------*/
 #include <bits/stdc++.h>
 using namespace std;
 #define crap                     \
@@ -18,14 +18,13 @@ using namespace std;
 //const int INF=1e9+5;//billion
 int primes[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89};
 string alpha = "abcdefghijklmnopqrstuvwxyz";
-/*----------Code is dope----------*/
+/*----------JU IS LOVE----------*/
 //int power(int a,int b,int m){int ans=1;while(b){if(b&1)ans=(ans*a)%m;b/=2;a=(a*a)%m;}return ans;}
 //int power(int a, int b){int ans=1;while(b){if(b&1)ans=ans*a;b/=2;a=a*a;}return ans;}
 
 signed main()
 {
 
-    // freopen("input.txt", "r", stdin);
     crap;
 
     int t;
@@ -34,6 +33,38 @@ signed main()
 
     while (t--)
     {
+        int n;
+        cin >> n;
+        string s;
+        cin >> s;
+        int op = 0, cl = 0, res = 0;
+        for (int i = 0; i < n; i++)
+        {
+            if (s[i] == '(')
+            {
+                op++;
+            }
+            else
+            {
+                cl++;
+            }
+            if (cl > op)
+            {
+                if (s[i] == ')')
+                {
+                    s += ')';
+                    n++;
+                    cl--;
+                    res++;
+                }
+                else
+                {
+                    op++;
+                    res++;
+                }
+            }
+        }
+        cout << res << endl;
     }
 
     return 0;

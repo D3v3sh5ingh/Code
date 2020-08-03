@@ -1,0 +1,21 @@
+Problem URL: https://codeforces.com/contest/1350/problem/B
+I/O statements for B Orac and Models 
+
+---------------------------------------------------
+ Input 
+4
+4
+5 3 4 6
+7
+1 4 2 3 6 4 9
+5
+5 4 3 2 1
+1
+9
+
+ Output 
+2
+3
+1
+1
+---------------------------------------------------

@@ -1,0 +1,15 @@
+Problem URL: https://codeforces.com/contest/1350/problem/A
+I/O statements for A Orac and Factors 
+
+---------------------------------------------------
+ Input 
+3
+5 1
+8 2
+3 4
+
+ Output 
+10
+12
+12
+---------------------------------------------------

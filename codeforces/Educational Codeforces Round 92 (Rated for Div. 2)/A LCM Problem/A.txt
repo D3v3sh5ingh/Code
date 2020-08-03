@@ -1,0 +1,17 @@
+Problem URL: https://codeforces.com/contest/1389/problem/A
+I/O statements for A LCM Problem 
+
+---------------------------------------------------
+ Input 
+4
+1 1337
+13 69
+2 4
+88 89
+
+ Output 
+6 7
+14 21
+2 4
+-1 -1
+---------------------------------------------------

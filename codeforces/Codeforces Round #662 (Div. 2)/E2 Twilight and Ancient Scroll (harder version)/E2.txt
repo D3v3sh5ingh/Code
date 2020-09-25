@@ -1,0 +1,47 @@
+Problem URL: https://codeforces.com/contest/	1393/problem/E2
+I/O statements for E2 Twilight and Ancient Scroll (harder version) 
+
+---------------------------------------------------
+ Input 
+3
+abcd
+zaza
+ataka
+
+ Output 
+4
+---------------------------------------------------
+---------------------------------------------------
+ Input 
+4
+dfs
+bfs
+sms
+mms
+
+ Output 
+8
+---------------------------------------------------
+---------------------------------------------------
+ Input 
+3
+abc
+bcd
+a
+
+ Output 
+0
+---------------------------------------------------
+---------------------------------------------------
+ Input 
+6
+lapochka
+kartyshka
+bigbabytape
+morgenshtern
+ssshhhiiittt
+queen
+
+ Output 
+2028
+---------------------------------------------------

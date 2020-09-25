@@ -1,0 +1,13 @@
+Problem URL: https://codeforces.com/contest/	1393/problem/A
+I/O statements for A Rainbow Dash, Fluttershy and Chess Coloring 
+
+---------------------------------------------------
+ Input 
+2
+3
+4
+
+ Output 
+2
+3
+---------------------------------------------------

@@ -1,94 +1,35 @@
-#include <bits/stdc++.h>
+/*--------------------------"DeveshSingh"------"Delhi Technological UNIVERSITY"--------*/
+/*------------------------------Knowledge is power/\---------------------------------*/
+#include <stdio.h>
 using namespace std;
-int lower(vector<int> &arr, int start, int end, int val)
+#define crap                     \
+    ios::sync_with_stdio(false); \
+    cin.tie(NULL);               \
+    cout.tie(NULL)
+//cout<<fixed<<showpoint<<setprecision(12)<<ans<<endl;
+#define dbg(x) cerr << #x << " = " << x << endl
+#define endl "\n"
+// #define int long long int
+// #define double long double
+#define pb push_back
+#define mp make_pair
+#define PI acos(-1)
+
+//const int INF=1e9+5;//billion
+int primes[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89};
+// string alpha = "abcdefghijklmnopqrstuvwxyz";
+/*----------Code is dope----------*/
+//int power(int a,int b,int m){int ans=1;while(b){if(b&1)ans=(ans*a)%m;b/=2;a=(a*a)%m;}return ans;}
+//int power(int a, int b){int ans=1;while(b){if(b&1)ans=ans*a;b/=2;a=a*a;}return ans;}
+
+signed main()
 {
 
-    int index = end + 1;
-
-    while (start <= end)
-    {
-        int mid = (start + end) / 2;
-        if (arr[mid] == val)
-        {
-            index = mid;
-            end = mid - 1;
-        }
-        else if (arr[mid] > val)
-        {
-            end = mid - 1;
-        }
-        else
-        {
-            start = mid + 1;
-        }
-    }
-
-    return index;
-}
-
-int upper(vector<int> &arr, int start, int end, int val)
-{
-
-    int index = start - 1;
-
-    while (start <= end)
-    {
-        int mid = (start + end) / 2;
-        if (arr[mid] == val)
-        {
-            index = mid;
-            start = mid + 1;
-        }
-        else if (arr[mid] > val)
-        {
-            end = mid - 1;
-        }
-        else
-        {
-            start = mid + 1;
-        }
-    }
-
-    return index;
-}
-
-int solve(vector<int> &arr, int i, int j)
-{
-
-    if (i > j)
-        return 0;
-    if (i == j)
-        return arr[i];
-
-    int ans = 0;
-
-    for (int k = i; k <= j; k++)
-    {
-        int left_index = lower(arr, i, k - 1, arr[k] - 1);
-        int right_index = upper(arr, k + 1, j, arr[k] + 1);
-        int left_ans = solve(arr, i, left_index - 1);
-        int right_ans = solve(arr, right_index + 1, j);
-        int temp_ans = arr[k] + left_ans + right_ans;
-        ans = max(ans, temp_ans);
-    }
-
-    return ans;
-}
-
-int main()
-{
-
-    int n;
-    cin >> n;
-
-    vector<int> arr(n);
-
-    for (int i = 0; i < n; i++)
-        cin >> arr[i];
-
-    sort(arr.begin(), arr.end());
-
-    cout << solve(arr, 0, n - 1) << endl;
+    // freopen("input.txt", "r", stdin);
+    float x = 0.0;
+    int y = 10.2;
+    y /= 2;
+    printf("%d", y);
 
     return 0;
 }

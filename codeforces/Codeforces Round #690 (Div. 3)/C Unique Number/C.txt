@@ -1,0 +1,17 @@
+Problem URL: https://codeforces.com/contest/1462/problem/C
+I/O statements for C Unique Number 
+
+---------------------------------------------------
+Input
+4
+1
+5
+15
+50
+
+Output
+1
+5
+69
+-1
+---------------------------------------------------

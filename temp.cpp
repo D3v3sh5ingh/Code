@@ -1,39 +1,51 @@
 #include <bits/stdc++.h>
-#include <sstream>
-#include <unordered_set>
 using namespace std;
+typedef long long ll;
+typedef vector<int> vi;
+typedef vector<ll> vl;
+typedef vector<vl> vvl;
+typedef vector<vi> vvi;
+typedef vector<double> vd;
+typedef pair<ll, ll> pll;
+typedef pair<int, int> pii;
+typedef pair<double, double> pdd;
+typedef vector<pll> vll;
+typedef vector<string> vs;
 
-void remDuplicateWord(string str)
+int dpfun(string x, string s)
 {
-    stringstream ss(str);
+    int n = x.size(), m = s.size();
+    vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
 
-    unordered_set<string> tab;
+    for (int i = 0; i <= n; ++i)
+        dp[i][0] = 1;
 
-    do
+    for (int i = 1; i <= n; i++)
     {
-        string word;
-        ss >> word;
-
-        // check if current word already exist,if not then insert
-        while (tab.find(word) == tab.end())
+        for (int j = 1; j <= m; j++)
         {
-            cout << word << " ";
-            tab.insert(word);
+            if (x[i - 1] == s[j - 1])
+            {
+                dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];
+            }
+            else
+            {
+                dp[i][j] = dp[i - 1][j];
+            }
         }
-
-    } while (ss);
+    }
+    return dp[n][m];
 }
-using namespace std;
+
 int main()
 {
-    vector<pair<int, pair<int, int>>> x;
-    x.push_back(make_pair(1, make_pair(2, 3)));
-
-    x.push_back({4, {5, 6}});
-    for (auto i : x)
+    int t;
+    cin >> t;
+    string x, s = "SAMSUNG";
+    for (int i = 0; i < t; ++i)
     {
-        cout << i.first << " " << i.second.first << " " << i.second.second << endl;
+        cin >> x;
+        cout << dpfun(x, s);
     }
-
     return 0;
 }
